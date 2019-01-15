@@ -1,16 +1,14 @@
 <header>
   <div class="container">
-    <a routerLink="/" class="logo">NgCode-Along</a>
-
+    <!-- Interpelatin is used with double curly braces -->
+    <!-- see nav.compoenent.ts file to see how it is defined using type script -->
+    <a routerLink="/" class="logo"> {{ appTitle }} </a>
     <nav>
       <ul>
-        <li>
-          <a routerLink="/">Home</a></li>
-        <li>
-          <a routerLink="/about">About</a></li>
-        <li>
-          <a routerLink="/contact">Contact</a></li>Ï
-
+        <!-- router link is used in place of href -->
+        <li><a routerLink="/">Home</a></li>
+        <li><a routerLink="/about">About</a></li>     
+        <li><a routerLink="/contact">Contact</a></li> 
       </ul>
     </nav>
   </div>
