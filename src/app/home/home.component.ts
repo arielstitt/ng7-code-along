@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-home',
@@ -8,7 +9,10 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
 // here is the logic for the boolean in the html file
   h1Style: Boolean = false;
-  constructor() { }
+
+  //in order to access the methods from data.service.ts
+  //create an instance of it through dependancy injection in the constructor
+  constructor(private data: DataService) { }
 
   ngOnInit() {
   }
@@ -16,7 +20,11 @@ export class HomeComponent implements OnInit {
   firstClick() {
     console.log("clicked!")
     // selected h1Style and makes it true
-    this.h1Style = true;
+    // this.h1Style = true;
+
+//this.data will give you access to the data service method
+    this.data.firstClick();
+
   }
 
 }
