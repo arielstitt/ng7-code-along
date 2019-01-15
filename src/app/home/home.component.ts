@@ -19,8 +19,8 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     this.data.getUsers().subscribe(data => {
-      this.users = data;
-      console.log(this.data)
+      this.users = data
+      console.log(this.users);
     })
 
   }
@@ -33,6 +33,6 @@ export class HomeComponent implements OnInit {
 // //this.data will give you access to the data service method
 //     this.data.firstClick();
 
-  }
+  //}
 
 }

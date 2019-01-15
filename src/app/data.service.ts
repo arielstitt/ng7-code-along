@@ -16,8 +16,8 @@ export class DataService {
   //   return console.log("clicked from data.services.ts")
   // }
 
-  
+
   getUsers() {
-    return this.http.get('http://regres.in/api/users');
+    return this.http.get('https://reqres.in/api/users')
   }
 }
